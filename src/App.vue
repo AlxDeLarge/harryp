@@ -5,8 +5,6 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <template>
   <header>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/bluu" type="text/css"/>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
@@ -15,7 +13,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/characters">Characters</RouterLink>
       </nav>
     </div>
   </header>
