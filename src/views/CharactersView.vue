@@ -140,12 +140,93 @@ export interface wand {
                                             <v-responsive width="100%"></v-responsive>
                                             <v-col>
                                                 <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
-                                                    Art 
+                                                    Födelseår 
                                                 </v-sheet>
                                             </v-col>
                                             <v-col>
                                                 <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
-                                                    {{item.species}}
+                                                    {{item.yearOfBirth}}
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Härkomst 
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    {{item.ancestry}}
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Ögonfärg 
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    {{item.eyeColour}}
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Hårfärg 
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    {{item.hairColour}}
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Trollstav 
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    {{item.wand.core}}
+                                                    {{item.wand.wood}}
+                                                    {{item.wand.length}}
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Patronus 
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    {{item.patronus}}
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Hogwarts student 
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    <v-icon v-if="item.hogwartsStudent" icon="mdi-check"></v-icon> 
+                                                    <v-icon v-else icon="mdi-close"></v-icon>
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Hogwarts anställd 
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    <v-icon v-if="item.hogwartsStaff" icon="mdi-check"></v-icon> 
+                                                    <v-icon v-else icon="mdi-close"></v-icon>
                                                 </v-sheet>
                                             </v-col>
                                         </v-row>
