@@ -66,7 +66,7 @@ export interface wand {
                         class="fill-height">
                         <v-card
                             :key="item.id"
-                            class="fill-height hp-card"
+                            class="hp-card"
                             >
                             <v-layout align-center>
                                 <v-img
@@ -150,22 +150,6 @@ export interface wand {
                                             </v-col>
                                         </v-row>
                                     </v-container>
-                                    <div class="d-flex flex-no-wrap justify-space-between">
-                                        <v-card-text class="text-h6 custom-font">
-                                            Födelseår
-                                        </v-card-text>
-                                        <v-card-text class="text-h6 custom-font">
-                                            {{item.yearOfBirth}}
-                                        </v-card-text>
-                                    </div>
-                                    <div class="d-flex flex-no-wrap justify-space-between">
-                                        <v-card-text class="text-h6 custom-font">
-                                            Härkomst
-                                        </v-card-text>
-                                        <v-card-text class="text-h6 custom-font">
-                                            {{item.ancestry}}
-                                        </v-card-text>
-                                    </div>
                                 </div>
                             </v-expand-transition>
                         </v-card>
