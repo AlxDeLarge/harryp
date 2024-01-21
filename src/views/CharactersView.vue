@@ -57,34 +57,31 @@ export interface wand {
 <template>
     <v-container>
         <v-row class="fill-height overflow-y-auto">
-            <v-col lg="3" md="5" sm="7" cols="12" min-width="340" max-width="344" v-for="item in char">
-                <v-sheet min-height="250" class="fill-height" color="transparent">
+            <v-col lg="3" md="4" sm="6" cols="12" v-for="item in char">
+                <v-sheet min-height="250px" class="fill-height" color="transparent">
                     <v-lazy
                         v-model="item.isActive" :options="{
                         threshold: .5
                         }"
-                        min-width="340"
                         class="fill-height">
-
                 <v-card
                     :key="item.id"
-                    class="mx-auto"
-                    max-width="344"
-                    width="340"
+                    class="mx-auto hp-card"
                     >
+                    <v-layout align-center>
                     <v-img
                         :src="item.image"
                         max-height="200px"
                         contain
-                        max-width="270px"
                         padding-bottom="1em"
                         width="auto"
                         height="auto"
                         ></v-img>
-                    <v-card-title>
+                    </v-layout>
+                    <v-card-title class="text-h5 custom-font">
                         {{item.name}}
                     </v-card-title>
-                    <v-card-subtitle>
+                    <v-card-subtitle class="text-h6 custom-font">
                         {{item.house}}
                     </v-card-subtitle>
                     <v-card-actions>
@@ -104,7 +101,7 @@ export interface wand {
                         <div v-show="item.show">
                             <v-divider></v-divider>
                             <v-card-text>
-                                I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
+
                             </v-card-text>
                         </div>
                     </v-expand-transition>
@@ -117,6 +114,13 @@ export interface wand {
 </template>
 
 <style>
+.custom-font {
+   font-family: 'BluuNextBoldItalic', serif;
+   color: #e8e6e3;
+}
+.hp-card {
+    background: #191b1c
+}
 body { font-size: 1em; background: #221E4E; padding: 2em; font-family: 'BluuNextBoldItalic', serif;}
 .card { border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,.15); -webkit-box-shadow: 0 4px 10px rgba(0,0,0,.15); -moz-box-shadow: 0 4px 10px rgba(0,0,0,.15); background-color: #F1E6BA;}
 .card-topper { border-top-right-radius: 8px; border-top-left-radius: 8px; padding: 8px 16px; font-size: 2em; font-weight: 600; text-align: center; background-color: #312823; color: #ffffff;}
