@@ -55,59 +55,122 @@ export interface wand {
   }
 </script>
 <template>
-    <v-container>
+    <v-container class="py-3 fluid">
         <v-row class="fill-height overflow-y-auto">
-            <v-col lg="3" md="4" sm="6" cols="12" v-for="item in char">
+            <v-col lg="4" md="5" sm="9" cols="12" v-for="item in char">
                 <v-sheet min-height="250px" class="fill-height" color="transparent">
                     <v-lazy
                         v-model="item.isActive" :options="{
                         threshold: .5
                         }"
                         class="fill-height">
-                <v-card
-                    :key="item.id"
-                    class="mx-auto hp-card"
-                    >
-                    <v-layout align-center>
-                    <v-img
-                        :src="item.image"
-                        max-height="200px"
-                        contain
-                        padding-bottom="1em"
-                        width="auto"
-                        height="auto"
-                        ></v-img>
-                    </v-layout>
-                    <v-card-title class="text-h5 custom-font">
-                        {{item.name}}
-                    </v-card-title>
-                    <v-card-subtitle class="text-h6 custom-font">
-                        {{item.house}}
-                    </v-card-subtitle>
-                    <v-card-actions>
-                        <v-btn
-                            color="orange-lighten-2"
-                            variant="text"
+                        <v-card
+                            :key="item.id"
+                            class="fill-height hp-card"
                             >
-                            Explore
-                        </v-btn>
-                            <v-spacer></v-spacer>
-                            <v-btn
-                                :icon="item.show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
-                                @click="item.show = !item.show"
-                                ></v-btn>
-                    </v-card-actions>
-                    <v-expand-transition>
-                        <div v-show="item.show">
-                            <v-divider></v-divider>
-                            <v-card-text>
-
-                            </v-card-text>
-                        </div>
-                    </v-expand-transition>
-                </v-card>
-</v-lazy>
-</v-sheet>
+                            <v-layout align-center>
+                                <v-img
+                                    class="d-block mx-auto rounded"
+                                    :src="item.image"
+                                    max-height="200px"
+                                    max-width="270px"
+                                    contain
+                                    padding-bottom="1em"
+                                    width="auto"
+                                    height="auto"
+                                    ></v-img>
+                            </v-layout>
+                            <v-card-title class="text-h5 custom-font">
+                                {{item.name}}
+                            </v-card-title>
+                            <v-card-subtitle class="text-h6 custom-font">
+                                {{item.house}}
+                            </v-card-subtitle>
+                            <v-card-actions>
+                                <v-btn
+                                    color="orange-lighten-2"
+                                    variant="text"
+                                    >
+                                    Explore
+                                </v-btn>
+                                    <v-spacer></v-spacer>
+                                    <v-btn
+                                        :icon="item.show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+                                        @click="item.show = !item.show"
+                                        ></v-btn>
+                            </v-card-actions>
+                            <v-expand-transition>
+                                <div v-show="item.show">
+                                    <v-divider></v-divider>
+                                    <v-container>
+                                        <v-row no-gutters>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Art 
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    {{item.species}}
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Kön
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    <v-icon v-if="item.gender === 'male'" icon="mdi-gender-male"></v-icon>
+                                                    <v-icon v-if="item.gender === 'female'" icon="mdi-gender-female"></v-icon>
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Födelsedatum
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    {{item.dateOfBirth}}
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-responsive width="100%"></v-responsive>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    Art 
+                                                </v-sheet>
+                                            </v-col>
+                                            <v-col>
+                                                <v-sheet class="pa-2 ma-2 text-h6 custom-font hp-card">
+                                                    {{item.species}}
+                                                </v-sheet>
+                                            </v-col>
+                                        </v-row>
+                                    </v-container>
+                                    <div class="d-flex flex-no-wrap justify-space-between">
+                                        <v-card-text class="text-h6 custom-font">
+                                            Födelseår
+                                        </v-card-text>
+                                        <v-card-text class="text-h6 custom-font">
+                                            {{item.yearOfBirth}}
+                                        </v-card-text>
+                                    </div>
+                                    <div class="d-flex flex-no-wrap justify-space-between">
+                                        <v-card-text class="text-h6 custom-font">
+                                            Härkomst
+                                        </v-card-text>
+                                        <v-card-text class="text-h6 custom-font">
+                                            {{item.ancestry}}
+                                        </v-card-text>
+                                    </div>
+                                </div>
+                            </v-expand-transition>
+                        </v-card>
+                    </v-lazy>
+                </v-sheet>
             </v-col>
         </v-row>
     </v-container>
