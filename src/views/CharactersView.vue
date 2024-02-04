@@ -91,10 +91,11 @@ export interface wand {
                                     color="orange-lighten-2"
                                     variant="text"
                                     >
-                                    Explore
+                                    Information
                                 </v-btn>
                                     <v-spacer></v-spacer>
                                     <v-btn
+                                        color="white"
                                         :icon="item.show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
                                         @click="item.show = !item.show"
                                         ></v-btn>

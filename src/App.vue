@@ -6,16 +6,14 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
     <header>
         <div class="wrapper">
-            <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/bluu" type="text/css"/>
-            <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
+            <link rel="stylesheet" media="screen" href="https://fontlibrary.org/en/face/bluu" type="text/css"/>
             <div>
                 <img class="tilde" src="./assets/images/tilde.png" />
             </div>
-            <!--<HelloWorld msg="You did it!" />-->
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/characters">Characters</RouterLink>
+        <RouterLink to="/characters">Karaktärer</RouterLink>
+        <RouterLink to="/spells">Trollformler</RouterLink>
       </nav>
     </div>
   </header>
