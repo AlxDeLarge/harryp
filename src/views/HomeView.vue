@@ -35,7 +35,7 @@ import TheWelcome from '../components/TheWelcome.vue'
 </template>
 <style>
 .link-card {
-    background: #191b1c;
-    color: white;
+    background: #191b1c !important;
+    color: white !important;
 }
 </style>
